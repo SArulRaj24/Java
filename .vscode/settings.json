@@ -1,0 +1,8 @@
+{
+    "git.ignoreLimitWarning": true,
+    "editor.dropIntoEditor.enabled": true,
+    "editor.dropIntoEditor.preferences": [
+
+    ],
+    "editor.hideCursorInOverviewRuler": false
+}

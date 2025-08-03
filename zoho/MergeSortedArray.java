@@ -1,0 +1,27 @@
+import java.util.Arrays;
+
+public class MergeSortedArray {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 3, 5};
+        int[] arr2 = {2, 4, 6, 7, 8};
+        //1 2 3 4 5
+        int[] ans=new int[arr1.length+arr2.length];
+        int i=0;
+        int j=0;
+        int k=0;
+        while(i<arr1.length && j<arr2.length){
+            if(arr1[i]<arr2[j]){
+                ans[k++]=arr1[i++];
+            }else{
+                ans[k++]=arr2[j++];
+            }
+        }
+        while(i<arr1.length){
+            ans[k++]=arr1[i++];
+        }
+        while(j<arr2.length){
+            ans[k++]=arr2[j++];
+        }
+        System.out.println(Arrays.toString(ans));
+    }
+}

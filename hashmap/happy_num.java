@@ -7,8 +7,7 @@ class happy_num{
         int n = sc.nextInt();
         System.out.println("Is " + n + " a happy number? " + isHappy(n));
     }
-
-
+    
 
     public static boolean isHappy(int n) {
         HashSet<Integer> seen = new HashSet<>();

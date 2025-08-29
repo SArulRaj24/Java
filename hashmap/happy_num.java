@@ -1,5 +1,6 @@
 package hashmap;
-import java.util.HashSet;
+// import java.util.HashSet;
+import java.util.*;
 import java.util.Scanner;
 class happy_num{
     public static void main(String[] args) {

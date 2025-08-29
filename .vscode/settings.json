@@ -4,5 +4,6 @@
     "editor.dropIntoEditor.preferences": [
 
     ],
-    "editor.hideCursorInOverviewRuler": false
+    "editor.hideCursorInOverviewRuler": false,
+    "java.debug.settings.onBuildFailureProceed": true
 }

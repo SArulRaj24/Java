@@ -17,27 +17,39 @@ public class Cnt_sub_sq {
         int cnt=0;
         int row=mat.length;
         int col=mat[0].length;
-        for(int size=1;size<=Math.min(row,col);size++){
-            for(int i=0;i<=row-size;i++){
-                for(int j=0;j<=col-size;j++){
-                    if(validate(mat,i,j,size)){
-                        cnt++;
-                    }
+    //     for(int size=1;size<=Math.min(row,col);size++){
+    //         for(int i=0;i<=row-size;i++){
+    //             for(int j=0;j<=col-size;j++){
+    //                 if(validate(mat,i,j,size)){
+    //                     cnt++;
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     System.out.println(cnt);
+    // }
+
+    // public static boolean validate(int[][] mat,int row,int col,int size){
+    //     for(int i=row;i<row+size;i++){
+    //         for(int j=col;j<col+size;j++){
+    //             if(mat[i][j]!=1){
+    //                 return false;
+    //             }
+    //         }
+    //     }
+    //     return true;
+
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                if(mat[i][j]==1) cnt++;
+                if(i>0 && j>0 && mat[i][j]>0){
+                    int min=Math.min(mat[i-1][j-1],Math.min(mat[i-1][j],mat[i][j-1]));
+                    mat[i][j]=min+1;
+                    cnt+=min;
                 }
+                
             }
         }
         System.out.println(cnt);
-    }
-
-    public static boolean validate(int[][] mat,int row,int col,int size){
-        for(int i=row;i<row+size;i++){
-            for(int j=col;j<col+size;j++){
-                if(mat[i][j]!=1){
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-    
+    }  
 }
